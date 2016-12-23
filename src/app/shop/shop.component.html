@@ -1,3 +1,21 @@
-<p>
-  shop works!
-</p>
+<div>
+    <h3>The Movie Shopping</h3>
+    <div>
+        <h4>Recently added movies:</h4>
+        <ul>
+            <li *ngFor="let movie of movieList" (click)="selectedMovie(movie)">
+                {{movie}}
+            </li>
+        </ul>
+
+    </div>
+    <div>
+        <h4>Cart</h4>
+        <p>Recently added movies: {{recentMovie}}</p>
+        <ul>
+            <li *ngFor="let item of cartItem">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+</div>
